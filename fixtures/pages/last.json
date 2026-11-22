@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "resourceId": "fixture_5",
+      "displayName": "灯塔手记.txt",
+      "type": "book",
+      "mimeType": "text/plain",
+      "sizeBytes": 36619,
+      "contentVersion": "735dcfc654e666069d17c88a45cd966e4b83ea7c56c83acbdf94eb86f038460b",
+      "sha256": "735dcfc654e666069d17c88a45cd966e4b83ea7c56c83acbdf94eb86f038460b"
+    }
+  ],
+  "nextCursor": null
+}

@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "resourceId": "fixture_1",
+      "displayName": "harbor-seek.mp4",
+      "type": "video",
+      "mimeType": "video/mp4",
+      "sizeBytes": 1978896,
+      "contentVersion": "1c822f26c8f0f03c1c70fd082eea5d7cbff67cbb9a05d7a9e07648f2467e5539",
+      "sha256": "1c822f26c8f0f03c1c70fd082eea5d7cbff67cbb9a05d7a9e07648f2467e5539"
+    },
+    {
+      "resourceId": "fixture_2",
+      "displayName": "harbor-tone.mp3",
+      "type": "audio",
+      "mimeType": "audio/mpeg",
+      "sizeBytes": 13075,
+      "contentVersion": "82676c3a40df5cc5346d17d06cf7ee8e6e1353faf98c0dbdb9dba326ae59d77f",
+      "sha256": "82676c3a40df5cc5346d17d06cf7ee8e6e1353faf98c0dbdb9dba326ae59d77f"
+    },
+    {
+      "resourceId": "fixture_3",
+      "displayName": "harbor-tone.wav",
+      "type": "audio",
+      "mimeType": "audio/wav",
+      "sizeBytes": 384044,
+      "contentVersion": "c86328611cfa9a0d4e263a4071812c5c2acc664f19587b2cb01839a1a51969ea",
+      "sha256": "c86328611cfa9a0d4e263a4071812c5c2acc664f19587b2cb01839a1a51969ea"
+    },
+    {
+      "resourceId": "fixture_4",
+      "displayName": "tide-notes.epub",
+      "type": "book",
+      "mimeType": "application/epub+zip",
+      "sizeBytes": 1963,
+      "contentVersion": "7591af940de558682de7fada58076d02cc1be665041550abba21374d027f31ac",
+      "sha256": "7591af940de558682de7fada58076d02cc1be665041550abba21374d027f31ac"
+    },
+    {
+      "resourceId": "fixture_5",
+      "displayName": "灯塔手记.txt",
+      "type": "book",
+      "mimeType": "text/plain",
+      "sizeBytes": 36619,
+      "contentVersion": "735dcfc654e666069d17c88a45cd966e4b83ea7c56c83acbdf94eb86f038460b",
+      "sha256": "735dcfc654e666069d17c88a45cd966e4b83ea7c56c83acbdf94eb86f038460b"
+    }
+  ],
+  "nextCursor": null
+}

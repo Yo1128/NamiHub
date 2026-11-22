@@ -1,0 +1,15 @@
+Microsoft Visual C++ Runtime for x64
+
+The Microsoft Visual C++ runtime DLLs in the application directory are
+Microsoft redistributable components. Copyright Microsoft Corporation.
+They come from the x64 Microsoft.VC143.CRT redist directory of the Visual
+Studio installation used to build this application. Distribution is subject
+to the applicable Microsoft Visual Studio license terms.
+
+Visual Studio license terms: https://visualstudio.microsoft.com/license-terms/
+Visual Studio 2022 distributable code list:
+https://learn.microsoft.com/visualstudio/releases/2022/redistribution
+Visual C++ redistribution guidance:
+https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files
+
+Flutter and its package notices are in data/flutter_assets/NOTICES.Z.

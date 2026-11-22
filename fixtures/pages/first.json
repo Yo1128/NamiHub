@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "resourceId": "fixture_1",
+      "displayName": "harbor-seek.mp4",
+      "type": "video",
+      "mimeType": "video/mp4",
+      "sizeBytes": 1978896,
+      "contentVersion": "1c822f26c8f0f03c1c70fd082eea5d7cbff67cbb9a05d7a9e07648f2467e5539",
+      "sha256": "1c822f26c8f0f03c1c70fd082eea5d7cbff67cbb9a05d7a9e07648f2467e5539"
+    },
+    {
+      "resourceId": "fixture_2",
+      "displayName": "harbor-tone.mp3",
+      "type": "audio",
+      "mimeType": "audio/mpeg",
+      "sizeBytes": 13075,
+      "contentVersion": "82676c3a40df5cc5346d17d06cf7ee8e6e1353faf98c0dbdb9dba326ae59d77f",
+      "sha256": "82676c3a40df5cc5346d17d06cf7ee8e6e1353faf98c0dbdb9dba326ae59d77f"
+    }
+  ],
+  "nextCursor": "fixture_2"
+}

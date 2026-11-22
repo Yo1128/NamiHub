@@ -1,0 +1,25 @@
+name: nami_hub_desktop
+description: NamiHub Windows library manager.
+publish_to: none
+version: 0.2.1+3
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  nami_hub:
+    path: ..
+  path: ^1.9.1
+  crypto: ^3.0.7
+dev_dependencies:
+  integration_test:
+    sdk: flutter
+  nami_hub_client:
+    path: ../packages/nami_hub_client
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true

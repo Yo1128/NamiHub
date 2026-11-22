@@ -1,0 +1,44 @@
+[
+  {
+    "status": 401,
+    "body": {
+      "error": "unauthorized"
+    }
+  },
+  {
+    "status": 403,
+    "body": {
+      "error": "invalid_pair_code"
+    }
+  },
+  {
+    "status": 403,
+    "body": {
+      "error": "pairing_closed"
+    }
+  },
+  {
+    "status": 404,
+    "body": {
+      "error": "resource_missing"
+    }
+  },
+  {
+    "status": 409,
+    "body": {
+      "error": "rescan_required"
+    }
+  },
+  {
+    "status": 412,
+    "body": {
+      "error": "version_changed"
+    }
+  },
+  {
+    "status": 416,
+    "body": {
+      "error": "range_not_satisfiable"
+    }
+  }
+]

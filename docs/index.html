@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="在 Windows 上共享一个文件夹。NamiRead 和 NamiView 通过八位码连接，在线读书、看视频，也可单独下载。">
+  <title>NamiHub · 局域网共享资料库</title>
+  <link rel="icon" href="assets/mark.png" type="image/png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="bar wrap">
+    <a class="brand" href="./" aria-label="NamiHub 首页"><img src="assets/mark.png" width="33" height="33" alt="">NamiHub</a>
+    <nav aria-label="主导航"><a href="#connect">连接设备</a><a href="https://github.com/Yo1128/NamiHub">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="intro wrap" aria-labelledby="title">
+      <div class="intro-copy">
+        <p class="platform">WINDOWS <span> / </span> x64</p>
+        <h1 id="title">局域网里的<br>共享资料库</h1>
+        <p class="lede">在电脑上选一个文件夹，让手机上的 NamiRead 和另一台电脑上的 NamiView 都能打开它。</p>
+        <div class="actions"><a class="button" href="https://github.com/Yo1128/NamiHub/blob/main/desktop/README.md">从源码构建 <span aria-hidden="true">↗</span></a><a class="text-link" href="#connect">如何连接 <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <figure class="preview">
+        <div class="window-bar"><img src="assets/mark.png" width="16" height="16" alt=""><span>NamiHub</span><span class="window-version">Windows 桌面端</span></div>
+        <a href="assets/library.webp" aria-label="查看资料库窗口大图"><img class="screenshot" src="assets/library.webp" alt="示例资料库按视频、音乐、书籍分类，列出文件名、格式与大小。" width="1166" height="659"></a>
+      </figure>
+    </section>
+    <section id="connect" class="connect">
+      <div class="wrap walkthrough">
+        <div><h2>用八位码连接</h2><p class="tip">电脑和客户端需要连接到可互访的同一局域网。</p></div>
+        <ol class="steps">
+          <li><strong>选择要共享的文件夹</strong><p>在 NamiHub 点击「更换目录」，确认文件列表后，点击「开始共享」。</p></li>
+          <li><strong>在客户端输入配对码</strong><p>在 NamiRead 书架打开「浏览 NamiHub 书库」，或在 NamiView 媒体库打开「NamiHub」。每个应用单独配对。</p></li>
+          <li><strong>点书名阅读，点片名播放</strong><p>书籍和视频按需读取。想在离线时打开某本书或某一集，在对应条目的菜单中选择「下载到本机」。</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="wrap developers" aria-labelledby="dev">
+      <h2 id="dev">接入 NamiHub</h2>
+      <div class="links">
+        <a href="https://github.com/Yo1128/NamiHub/tree/main/packages/nami_hub_client"><span>Dart SDK</span><span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/Yo1128/NamiHub/blob/main/docs/api-v1.md"><span>HTTP API v1</span><span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/Yo1128/NamiHub/blob/main/docs/interop.md"><span>命令行联调</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

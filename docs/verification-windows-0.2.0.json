@@ -1,0 +1,16 @@
+{
+  "sdk": "passed",
+  "fixtureFiles": 5,
+  "sdkResumeByte": 4096,
+  "automaticRetryByte": 8192,
+  "videoSeekSeconds": 23,
+  "decoderRangeOffsets": [
+    1520880
+  ],
+  "decodedFrame": "SHA256=f982f43ffe04dbcea37ebfaefa62e3a5a7214b3cf052ef3056a4a098120c2702",
+  "authAndVersions": "passed",
+  "persistenceAndRevocation": "passed",
+  "version": "0.2.0",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "executableSha256": "469d2f53480dc13d1e0b06f84b0923719814739a35ac0c8c06999dd944107941"
+}
