@@ -24,13 +24,14 @@ h1 { font-size: clamp(48px, 5.5vw, 84px); font-weight: 780; letter-spacing: -.04
 .button { display: inline-flex; gap: 22px; align-items: center; padding: 13px 18px; border-radius: 5px; background: var(--ink); color: white; font-weight: 640; }
 .button:hover { background: #3b4036; text-decoration: none; }
 .text-link { font-weight: 600; font-size: 15px; }
+.package { margin-top: 12px; color: #585b50; font-size: 13px; line-height: 1.6; }
 .preview { position: relative; min-width: 0; align-self: center; border: 1px solid #b9b9af; border-radius: 9px; overflow: hidden; box-shadow: 0 18px 36px -25px #35372c88; background: #f7f7f3; }
 .window-bar { background: #ededE6; display: flex; align-items: center; justify-content: flex-start; gap: 6px; border-bottom: 1px solid #d1d2c8; padding: 8px 13px; font: 600 12px/1.2 "Segoe UI",sans-serif; }
 .window-version { margin-left: auto; color: #606557; font-size: 11px; font-weight: 500; }
 .preview a, .screenshot { display: block; width: 100%; height: auto; }
 .preview a:focus-visible { outline-offset: -4px; }
 .connect { background: var(--ink); color: var(--paper); }
-.walkthrough, .developers { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.45fr); gap: clamp(30px,4vw,72px); padding-block: clamp(45px,6vw,90px); }
+.walkthrough, .section-grid { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.45fr); gap: clamp(30px,4vw,72px); padding-block: clamp(45px,6vw,90px); }
 h2 { font-size: clamp(28px,3.3vw,45px); letter-spacing: -.035em; line-height: 1.25; }
 .tip { color: #c3c6bb; max-width: 20em; margin-top: 14px; }
 .steps { counter-reset: step; list-style: none; margin: 0; padding: 0; }
@@ -40,6 +41,13 @@ h2 { font-size: clamp(28px,3.3vw,45px); letter-spacing: -.035em; line-height: 1.
 .steps li::before { content: "0" counter(step); color: #ff986f; font: 600 15px/1.8 Consolas,monospace; }
 .steps strong { font-size: 19px; }
 .steps p { grid-column: 2; color: #d3d5cc; }
+.products article { scroll-margin-top: 20px; padding-block: 22px; border-top: 1px solid var(--line); }
+.products article:first-child { padding-top: 0; border-top: 0; }
+.products article:last-child { padding-bottom: 0; }
+.products h3 { margin: 0 0 6px; font-size: 24px; letter-spacing: -.025em; }
+.products p { max-width: 40em; line-height: 1.8; color: #494b43; }
+.products a { display: inline-block; margin-top: 8px; font-size: 15px; font-weight: 600; text-decoration: underline; text-underline-offset: .26em; }
+.developers { border-top: 1px solid var(--line); }
 .links a { display: flex; align-items: center; justify-content: space-between; min-height: 51px; border-bottom: 1px solid var(--line); font-weight: 600; }
 .links a:first-child { border-top: 1px solid var(--line); }
 @media (prefers-reduced-motion: no-preference) {
@@ -51,10 +59,16 @@ h2 { font-size: clamp(28px,3.3vw,45px); letter-spacing: -.035em; line-height: 1.
   .intro { grid-template-columns: 1fr; gap: 32px; padding-block: 48px; }
   .intro-copy { max-width: 42em; }
   .preview { width: 100%; }
-  .walkthrough, .developers { grid-template-columns: 1fr; gap: 27px; }
+  .walkthrough, .section-grid { grid-template-columns: 1fr; gap: 27px; }
 }
 @media (max-width: 480px) {
   .bar { min-height: 64px; } .bar nav { gap: 15px; } .bar nav a { font-size: 14px; }
+  .bar nav .repo-link { display: none; }
   .intro { padding-top: 36px; } h1 { font-size: clamp(43px, 12vw, 55px); }
   .lede { margin-block: 17px 22px; } .steps li { grid-template-columns: 25px 1fr; }
+}
+@media (max-width: 370px) {
+  .bar .brand { font-size: 21px; }
+  .bar .brand img { width: 26px; height: 26px; }
+  .bar nav { gap: 10px; }
 }
