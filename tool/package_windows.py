@@ -11,16 +11,11 @@ import urllib.parse
 import urllib.request
 import zipfile
 
-from release_archives import PROJECT, archive, digest, version, write_checksums
+from release_archives import PROJECT, archive, digest, fixture_media, version, write_checksums
 from verify import RunningHub, verify
 
 DIST = PROJECT / "dist"
 BUILD = PROJECT / "build"
-
-
-def sources(folder):
-    return [f for f in folder.rglob("*") if f.is_file() and
-            not {".dart_tool","__pycache__","build"}.intersection(f.relative_to(folder).parts)]
 
 
 def check_archives(kit, sdk_zip, dart):
@@ -91,20 +86,34 @@ def main(output):
         stage = Path(work)
         report = stage / f"verification-windows-{service_version}.json"
         report.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
-        sdk_files = {f.relative_to(sdk).as_posix(): f for f in sources(sdk) if f.name != "pubspec.lock"}
+        sdk_files = {name: sdk / name for name in ("README.md", "pubspec.yaml")}
+        for folder in ("lib", "example"):
+            for f in (sdk / folder).rglob("*.dart"):
+                sdk_files[f.relative_to(sdk).as_posix()] = f
+        if (sdk / "LICENSE").is_file():
+            sdk_files["LICENSE"] = sdk / "LICENSE"
         if (PROJECT / "LICENSE").is_file():
             sdk_files.setdefault("LICENSE", PROJECT / "LICENSE")
         sdk_zip = stage / f"nami_hub_client-{version(sdk)}.zip"
         archive(sdk_zip, sdk_files)
         files = {"nami_hub.exe": exe, **notices(dart)}
-        for folder in ["bin", "lib", "tool", "fixtures", "packages"]:
-            files.update({f.relative_to(PROJECT).as_posix(): f for f in sources(PROJECT / folder)})
+        for folder in ("bin", "lib"):
+            for f in (PROJECT / folder).rglob("*.dart"):
+                files[f.relative_to(PROJECT).as_posix()] = f
+        for f in (PROJECT / "tool").iterdir():
+            if f.is_file() and f.suffix in {".dart", ".ps1", ".py"}:
+                files["tool/" + f.name] = f
+        files.update({"packages/nami_hub_client/" + name: f for name, f in sdk_files.items()})
+        for name in ("catalog.json", "errors.json", "pages/first.json", "pages/second.json", "pages/last.json"):
+            files["fixtures/" + name] = PROJECT / "fixtures" / name
+        files.update({"fixtures/media/" + name: path for name, path in fixture_media().items()})
         for f in (PROJECT / "docs").glob("*"):
             if f.suffix in {".md", ".json"} and f.is_file():
                 files[f"docs/{f.name}"] = f
         files["docs/" + report.name] = report
         for name in ["README.md", "pubspec.yaml", "pubspec.lock", "Start-NamiHub.ps1"]:
             files[name] = PROJECT / name
+        files["README.md"] = PROJECT / "docs/interop.md"
         if (PROJECT / "LICENSE").is_file():
             files["LICENSE"] = PROJECT / "LICENSE"
         kit = stage / f"NamiHub-Interop-{service_version}-windows-x64.zip"

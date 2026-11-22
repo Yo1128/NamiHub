@@ -26,4 +26,4 @@
 | 主动选择「下载到本机」，完成后关闭主机并重启客户端 | 对应版本通过整文件校验。能离线打开同一资源并继续到之前的位置，无需访问主机；未下载的另一项能看到重连入口。 |
 | 断网后重试、传输中换版、移除本机下载 | 部分文件不会显示为可离线；失败或取消保留已有可用版本。移除后可在主机在线时重新打开原件，个人进度保留。 |
 
-在独立 SDK 包中运行 `dart pub get` 和 `dart run example/pair_lan.dart` 可先验证八码配对与目录读取。Hub 命令行联调包可用 `.\Start-NamiHub.ps1 -Lan -TraceReads` 观察范围。固定样本包括《灯塔手记》TXT、tide-notes.epub、MP3 与 WAV 音轨以及 harbor-seek.mp4。短样本用于格式验证；首屏、首帧或首声的传输量另用超过客户端预读范围的素材测量。各端独立记录构建号、样本、设备与结果。[固定样本清单](../fixtures/catalog.json) · [Hub 传输层已有验证记录](verification-windows-0.2.0.json)
+在独立 SDK 包中运行 `dart pub get` 和 `dart run example/pair_lan.dart` 可先验证八码配对与目录读取。Hub 命令行联调包可用 `.\Start-NamiHub.ps1 -Lan -TraceReads` 观察范围。固定样本包括《灯塔手记》TXT、tide-notes.epub、MP3 与 WAV 音轨以及 harbor-seek.mp4。短样本用于格式验证；首屏、首帧或首声的传输量另用超过客户端预读范围的素材测量。各端独立记录构建号、样本、设备与结果。[固定样本清单](../fixtures/catalog.json) · [0.2.1 主机与 SDK 验证记录](verification-windows-0.2.1.json)

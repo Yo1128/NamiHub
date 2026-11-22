@@ -1,5 +1,6 @@
 """Shared ZIP format and checksums for the Windows release artifacts."""
 import hashlib
+import json
 from pathlib import Path
 import re
 import shutil
@@ -23,6 +24,21 @@ def digest(path):
         while chunk := data.read(1024 * 1024):
             result.update(chunk)
     return result.hexdigest()
+
+
+def fixture_media():
+    folder = PROJECT / "fixtures"
+    rows = json.loads((folder / "catalog.json").read_text("utf-8"))["items"]
+    files = {}
+    for row in rows:
+        name = row["displayName"]
+        if Path(name).name != name or name in files:
+            raise ValueError(f"Invalid fixture name: {name}")
+        path = folder / "media" / name
+        if digest(path) != row["sha256"]:
+            raise ValueError(f"Fixture differs from catalog: {name}")
+        files[name] = path
+    return files
 
 
 def archive(path, files):

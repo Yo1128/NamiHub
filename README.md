@@ -2,7 +2,7 @@
 
 在 Windows 上选一个文件夹，把书籍、视频和音乐共享给同一局域网里的设备。NamiRead 可以点书名在线阅读，NamiView 可以点片名直接播放。两端都用八位码配对，也可以单独下载一本书或一集视频。
 
-[产品页](https://yo1128.github.io/NamiHub/) · [从源码构建](desktop/README.md) · [Dart SDK](packages/nami_hub_client/README.md) · [HTTP API v1](docs/api-v1.md)
+[产品页](https://yo1128.github.io/NamiHub/) · [从源码构建](desktop/README.md) · [Dart SDK](packages/nami_hub_client/README.md) · [HTTP API v1](docs/api-v1.md) · [0.2.1 变更记录](docs/releases/0.2.1.md)
 
 ![Windows 桌面端的共享资料库与分类文件列表](docs/assets/library.webp)
 

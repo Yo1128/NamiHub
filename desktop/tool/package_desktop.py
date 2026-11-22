@@ -8,7 +8,7 @@ import sys
 import tempfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tool"))
-from release_archives import PROJECT, archive, digest, version, write_checksums
+from release_archives import PROJECT, archive, digest, fixture_media, version, write_checksums
 
 
 def vc_runtime(binary_files, cmake_cache):
@@ -56,10 +56,10 @@ def collect(runtime, cache):
         if path.is_file():
             files[path.relative_to(runtime).as_posix()] = path
     hub_files = {"init_tls.ps1": PROJECT / "tool/init_tls.ps1"}
-    for source in (PROJECT / "fixtures/media").iterdir():
-        if source.name == "harbor-seek.mp4":
-            source = PROJECT / "desktop/assets" / source.name
-        hub_files["media/" + source.name] = source
+    samples = fixture_media()
+    samples["harbor-seek.mp4"] = PROJECT / "desktop/assets/harbor-seek.mp4"
+    for name, source in samples.items():
+        hub_files["media/" + name] = source
     for name, source in hub_files.items():
         path = runtime / "data/hub" / name
         if digest(source) != digest(path):

@@ -33,4 +33,4 @@ python tool/verify.py
 python tool/package_windows.py
 ```
 
-验证使用临时目录和独立的主机身份，覆盖按范围读取、下载重试、版本变化、撤权和视频定位。[桌面端构建与验证](../desktop/README.md)
+验证使用临时目录和独立的主机身份，覆盖按范围读取、下载重试、版本变化、撤权和视频定位。[桌面端构建与验证](https://github.com/Yo1128/NamiHub/blob/main/desktop/README.md)
