@@ -18,9 +18,9 @@ NamiHub 把 Windows 电脑上的文件夹变成只读的局域网资料库。你
 
 | 产品 | 用途 | 与 NamiHub 配合 |
 | --- | --- | --- |
-| [NamiRead](https://yo1128.github.io/NamiRead/#hub-title) · Android | 阅读 TXT 和 EPUB，保存书架、进度与书签 | 0.7.0 开发版在「书架 → ＋ → 浏览 NamiHub 书库」配对，按需读正文，也可下载整本。公开版 0.5.5 尚无此入口。 |
-| [NamiView](https://yo1128.github.io/NamiHub/#namiview) · Windows | 按系列和分季整理动漫，记录观看进度 | 本地候选版在「媒体库 → NamiHub」配对，点片名在线播放或续播，从单集菜单可下载到本机。 |
-| [NamiListen](https://yo1128.github.io/NamiHub/#namilisten) · Windows | 按专辑和歌单播放本机音乐，查看同步歌词 | 当前从本机文件夹导入音乐。八位码配对、在线收听和按曲下载仍在规划中。 |
+| [NamiRead](https://yo1128.github.io/NamiRead/#hub-title) · Android | 阅读 TXT 和 EPUB，保存书架、进度与书签 | 0.7.0 在「书架 → ＋ → 浏览 NamiHub 书库」配对，按需读正文，也可下载整本。 |
+| [NamiView](https://yo1128.github.io/NamiHub/#namiview) · Windows | 按系列和分季整理动漫，记录观看进度 | Windows 发布候选版在「媒体库 → NamiHub」配对，点片名在线播放或续播，从单集菜单可下载到本机。 |
+| [NamiListen](https://yo1128.github.io/NamiListen/) · Windows、Android | 按专辑和歌单播放本机音乐，查看同步歌词 | 当前从本机文件夹导入音乐。八位码配对、在线收听和按曲下载仍在规划中。 |
 
 ## 连接问题
 
